@@ -1,4 +1,4 @@
-# code_for_crash_course_for_expressJS
+# Description about dependencies
 
 `npm i -D nodemon`
 
