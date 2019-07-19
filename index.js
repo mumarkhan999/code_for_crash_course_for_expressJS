@@ -10,7 +10,7 @@ const app = express();
 // initialize middleware
 app.use(logger);
 
-// Handlebars Middleware
+// Handlebars Middleware (syntax given in express handlebars github documentation)
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 
@@ -32,6 +32,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Members API Routes
 app.use('/api/members', require('./routes/api/members'));
 
+
+// Listening on Port
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () =>  console.log(`Server started on port ${PORT}`));
